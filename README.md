@@ -1,26 +1,21 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+# Compilador #
+------------
 
+## Descripción ##
+Proyecto generado para la materia de Diseño de Compiladores. Es un compilador que sigue la gramatica descrita en el archivo 
+llamado `gramatica.txt`. 
 
-Hi there! Welcome to Cloud9 IDE!
+## Librerias Utilizadas ##
+- CodeMirror: https://github.com/codemirror/codemirror
+- Deck of Cards: https://github.com/pakastin/deck-of-cards
+- Los packetes para este proyecto NO estan en el package.json por lo que un npm install no traera las librerias. Esto es por que se realizaron cambios en la libreria de deck-of-cards agregando metodos para la visualización de la ejecución del programa.
 
-To get you started, we included a small hello world application.
+## Modo de uso ##
+- Abrir index.html
+- Elejir uno de los programas en el archivo de `TESTcases.txt` y darle ejecutar.
 
-1) Open the hello-world.html file
-
-2) Click on the Preview button to open a live preview pane
-
-3) Make some changes to the file, save, watch the preview, and have fun!
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+### Equipo ###
+- Toatzin Padilla Arias
+- Fredele senties
+- Noel Murillo
+- Christian Parra
