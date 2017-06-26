@@ -112,7 +112,7 @@ function initDeck () {
     card.animateTo({
         delay: 500 + i * 5, // wait 1 second + i * 2 ms
         duration: 1000,
-		    ease: 'quartOut', 
+		    ease: 'quartOut',
         x: startXPosition,
         y: startYPosition
     })
@@ -226,12 +226,12 @@ function function_ () {
     throw new Erro(msg);
     //st.push(tt[tti]);// = cii;
   }
-  
+
   ci[cii] = NEXTFUNCTION--;
   console.log("AGREGE A SINTACTIC TREE: ",tt[tti],  cii);
   st[tt[tti++]] = cii;
   cii++;
-  
+
   name_of_function();
   demand("(");
   demand(")");
@@ -250,7 +250,7 @@ function name_of_function () {
     console.log("tt[tti]: ", tt[tti]);
     customer_function();
   }
-  
+
 }
 
 function body () {
@@ -283,7 +283,7 @@ function expression () {
   else{
     call_function();
   }
-  
+
 }
 
   function official_function () {
@@ -328,7 +328,7 @@ function if_expression () {
   demand("}");
   ci[cii++]=JMP;
   ci[ci_stack.pop()]=cii+1;
-  
+
   ci_stack.push(cii++);
   if(verify("else")){
     demand("else");
@@ -390,7 +390,7 @@ function iterate_expression () {
   ci[cii++]=JMP;
   ci[ci_stack.pop()] = cii + 1;
   ci[cii++] = ci_stack.pop();
-  
+
 }
 
 function call_function () {
@@ -595,7 +595,7 @@ function deck_simple_condition () {
 //CI Execution
 function codeExecution_ () {
   console.log("CodeExecution ");
-  
+
   while(ci[ciie] != EXIT){
     //setTimeout(function(){console.log("me espere 1.5")}, 1500);
     if(ciie > 55) throw new Error("no mames");
@@ -841,7 +841,7 @@ function evaluateExpression () { //Return index where to jump
     if(res){
       ciie+=2;
     }
-    
+
   }else if(ci[ciie+1] == VALUE){
     //VALUE CONDITION
     isCardSelected();
@@ -854,7 +854,7 @@ function evaluateExpression () { //Return index where to jump
     if(res){
       ciie+=2;
     }
-    
+
   }else{
     // Expression without parameter
     isCardSelected();
@@ -1054,31 +1054,6 @@ function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-
-
-new Vue({
-  el: '#app',
-  data: {
-    decks: []
-  },
-  methods: {
-    teesstt(){
-      console.log("Tests!");
-      var from = {
-        line: 1,
-      };
-      var to = {
-        line: 2
-      };
-      this.editor.markText({line:1,ch:1},{line:1,ch:3},{readOnly:true});
-      //console.log(this.editor.getValue());
-    }
-  },
-  mounted(){
-    //console.log("Mounted");
-  }
-});
-
 //Initial Script
 initDeck();
 
@@ -1095,7 +1070,7 @@ var colIndex = 1;
     if((i % row) == 0) colIndex++;
     var relPosX = startX + (i% row)*deltaX;
     var relPosY = startY + (colIndex)*deltaY;
-    
+
     // explode
     card.animateTo({
         delay: 1000 + i * 2, // wait 1 second + i * 2 ms
@@ -1118,10 +1093,10 @@ function execute_ci_text(){
   if(!cm.getValue()) return;
   //Stop
   stop_fn();
-  
+
   //Reset
   initDeck();
-  
+
   //Data
   var arrayData = cm.getValue();
   ci = arrayData.replaceAll(" ","").replaceAll(/(?:\r\n|\r|\n)/g,",").replaceAll(/(?:\r\n|\r|\n|\t)/g,"").split(",");
@@ -1129,12 +1104,12 @@ function execute_ci_text(){
   for(var i = 0; i< ci.length; i++){
     ci[i] = parseInt(ci[i]);
   }
-  
+
   console.log("CI: ", ci);
   //Initi Execution.
   stop = false;
   setTimeout(function(){codeExecution();},1000);
-  
+
 }
 
 function loop2(){

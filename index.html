@@ -2,7 +2,6 @@
  <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diseno de Compiladores</title>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- jQuery library -->
@@ -12,36 +11,25 @@
   <!-- CodeMirror -->
   <link rel=stylesheet href="lib/codeMirror/codemirror.css">
   <script src="lib/codeMirror/codemirror.js"></script>
-  <script src="mode/xml/xml.js"></script>
+  <script src="lib/mode/xml/xml.js"></script>
 
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 
  </head>
  <body>
-
-   <!-- Navigation -->
- <!--   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Diseno de Compiladores - Proyecto</a>
             </div>
 
-        <!--</div>-->
-        <!-- /.container -->
-    <!--</nav>-->
 
     <br><br><br><br>
     <div class="container" id="app">
      <div class="row" >
        <div class="col-md-7">
         <!-- Lexicográfico -->
-
         <div id="topbar"></div>
            <div class="col-xs-4">
-             <!-- <textarea class="form-control" rows="10" v-model="inputText"></textarea> -->
-             <!-- Code Mirror -->
 
                <h2>Enter Code to Compile</h2>
                <form style="position: relative; margin-top: .5em;margin-bottom: .5em;">
@@ -53,16 +41,12 @@
                 <button id="continue" onclick="continue_fn()" type="submit" class="btn btn-default" >Continue</button>
                 <button id="next" onclick="loop2()" type="submit" class="btn btn-default" >next</button>
                 <button id="ci" onclick="execute_ci_text()" type="submit" class="btn btn-default" >Execute Intermediate Code</button>
-
-                <!--<button onclick="initDeck()" type="submit" class="btn btn-default" >Reset</button>-->
              <br>
 
              <br>
-             <!-- <p>{{ logDataSintactico }}</p> -->
 
            </div>
 
-          <!-- <button type="submit" class="btn btn-default" @click="teesstt">test</button> -->
          </div>
        </div>
        <div class="col-md-5">
@@ -74,9 +58,8 @@
 
 
 
-    <script src="./node_modules/deck-of-cards/dist/deck.js"></script>
+    <script  src="./js/deck.js"></script>
     <script  src="./js/subDeckClass.js" type="text/javascript"></script>
     <script  src="./js/compiler.js" type="text/javascript"></script>
-    <!--<script src="deck_custom.js"></script>-->
  </body>
 </html>
